@@ -6,6 +6,6 @@ There are many ways to approach this and first I thought of going for a Rails li
 
 After Rails I went for a Django structure because I like the idea of each app being a single entity in my application. This of course is a total lie and apps will mostly spill over into each other but it's something nice to aim for. The Django style of apps actually worked very well for me and I stuck with it.
 
-Since code says more than words you can find an [example](https://github.com/Enome/blog/tree/master/001_structuring_express_js_applications) of how I structure in this directory. ( Look up )
+Since code says more than words you can find an [example](https://github.com/Enome/blog/tree/master/001_structuring_express_js_applications/example_app) of how I structure in this directory. ( Look up )
 
 You can discuss this post over [here](https://github.com/Enome/blog/issues/1).
