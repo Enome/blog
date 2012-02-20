@@ -1,8 +1,6 @@
 #2012-02-20 Structuring an Express.js application
 
-After using Express.js for a few weeks I am reaching a point where I don't completely hate my current project structure. Most examples on the web will just put everything in the app.js and that's fine for really small applications but when
-
-you need something bigger, you have to organise your code in blocks that make sense.
+After using Express.js for a few weeks I am reaching a point where I don't completely hate my current project structure. Most examples on the web will just put everything in the app.js and that's fine for really small applications but when you need something bigger, you have to organise your code in blocks that make sense.
 
 There are many ways to approach this and first I thought of going for a Rails like structure but this didn't work out. The main problem was that Express.js is made out of middleware and having a controllers directory/file with middleware code was a bit confusing.
 
