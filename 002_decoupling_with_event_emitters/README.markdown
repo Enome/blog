@@ -127,7 +127,7 @@ This handler is actually saying "Somebody, create me a document! I don't really 
 
 There are a few and the first one you'll run into is that you sometimes don't know if something is actually listening to an event. What I did to solve this was to wrap my event emitter with a function that just does 'console.log' when an event is registered and when an event is called. 
 
-You also have to write a little more code to connect everything. This can be annoying especially in small modules. So I have this rule that inter library communication can be done directly but any communication to the outside world has to pass through the command tower (aka the event emitter).
+You also have to write a little more code to connect everything. This can be annoying especially in small libraries. So I have this rule that inter library communication can be done directly but any communication to the outside world has to pass through the command tower (aka the event emitter).
 
 ##Bonus Material
 
