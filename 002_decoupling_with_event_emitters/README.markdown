@@ -79,7 +79,6 @@ Next you need to have an actual event emitter object. For my projects I create a
 
 var EventEmitter = require('events').EventEmitter
 module.exports = new EventEmitter()
-};
 ```
 
 ## Connecting it
