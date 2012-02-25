@@ -3,7 +3,7 @@
 
 ## TL:DR
 
-Check out the (Example app)[https://github.com/Enome/blog/tree/master/002_decoupling_with_event_emitters/example_app] in this directory.
+Check out the [Example app](https://github.com/Enome/blog/tree/master/002_decoupling_with_event_emitters/example_app) in this directory.
 
 ## The wrong way.
 
