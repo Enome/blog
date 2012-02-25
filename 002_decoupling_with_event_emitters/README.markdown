@@ -83,7 +83,7 @@ module.exports = new EventEmitter()
 
 ## Connecting it
 
-You now have an event emitter and a module with a listener but you still need to connect both parts. You may have noticed that my database library is inside an init function. I use this function to inject the event emitter into my module. You could just import the event.js directly or you could use a global variable if you don't mind that. I like doing it this way so I have a list of all the modules that listen to events.
+You now have an event emitter and a module with a listener but you still need to connect both parts. You may have noticed that my database library is inside an init function. I use this function to inject the event emitter into my module. You could just import the event.js module directly or you could use a global variable if you don't mind that. I like doing it this way so I have a list of all the modules that listen to events.
 
 To connect it I am using the same technique that I talked about in my previous [blog post](https://github.com/Enome/blog/blob/master/001_structuring_express_js_applications/example_app/app.js#L15) 
 to register routes.  When I wrote that, I thought 'Wow, this is great but where does it all come together?'. The answer is: in the app.js file. I register routes in my app.js. You can use the same to technique to register events.
@@ -125,9 +125,9 @@ This handler is actually saying "Somebody, create me a document! I don't really 
 
 ##Is there any downside of using events?
 
--There are a few and the first one you'll run into is that you sometimes don't know if something is actually listening to an event. What I did to solve this was to wrap my event emitter with a function that just does 'console.log' when an event is registered and when an event is called. 
+There are a few and the first one you'll run into is that you sometimes don't know if something is actually listening to an event. What I did to solve this was to wrap my event emitter with a function that just does 'console.log' when an event is registered and when an event is called. 
 
--You also have to write a little more code to connect everything. This can be annoying especially in small modules. So I have this rule that inter library communication can be done directly but any communication to the outside world has to pass through the command tower (aka the event emitter).
+You also have to write a little more code to connect everything. This can be annoying especially in small modules. So I have this rule that inter library communication can be done directly but any communication to the outside world has to pass through the command tower (aka the event emitter).
 
 ##Bonus Material
 
