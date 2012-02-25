@@ -152,3 +152,8 @@ You just have to make sure that your fake database listens to the same events as
 
 
 That's all I have on event emitters. Another interesting blog post can be found on the [pragmatic programmers website](http://pragprog.com/magazines/2011-08/decouple-your-apps-with-eventdriven-coffeescript). He uses a global instead of injecting the emitter. He also points out how using events limits dependencies. You can also use this technique for [large client side apps](http://addyosmani.com/scalable-javascript-videos/). On that website they talk about decoupling large applications with the combination of events and other patterns. To be honest I didn't full understand it, but it sure looks impressive.
+
+
+##Comments
+
+As always I would love to hear your [comments](https://github.com/Enome/blog/issues/2).
