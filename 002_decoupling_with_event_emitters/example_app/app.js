@@ -14,7 +14,7 @@ app.configure(function(){
 var eventEmitter = require('./events');
 
 // Events
-require('./database_layer').init(eventEmitter);
+require('./database').init(eventEmitter);
 
 // Routes
 require('./apps/first_app/routes.js')(app)

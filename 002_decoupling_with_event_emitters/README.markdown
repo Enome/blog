@@ -1,6 +1,10 @@
 ﻿2012-02-25 Use event emitters to decouple parts in your express.js application.
 ===============================================================================
 
+## TL:DR
+
+Check out the (Example app)[https://github.com/Enome/blog/tree/master/002_decoupling_with_event_emitters/example_app] in this directory.
+
 ## The wrong way.
 
 One of the "mistakes" I did when I first started using express.js was to directly call the external parts of my application. Lets say you have a data layer for creating documents in a document database. What you could do, is import the module and start calling it directly.
