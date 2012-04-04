@@ -1,4 +1,5 @@
-﻿# 2012-04-03 Uploading images using jQuery File Upload and Express.js
+﻿2012-04-03 Uploading images using jQuery File Upload and Express.js
+===================================================================
 
 The goal is to have a web page that lets you create a product with multiple images associated. We will be using JavaScript to asynchronously upload the files to the back-end. The back-end will return these images to the front-end which in turn will show a preview. 
 
