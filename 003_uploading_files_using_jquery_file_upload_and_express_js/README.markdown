@@ -147,7 +147,7 @@ While almost finishing this post I got my [HTML5 Weekly](http://html5weekly.com/
 
 ## Source code
 
-The code for this app can be found inside this directory. npm install and node app.js should be enough to run it.
+The code for this app can be found inside this directory. Creating a media dir inside /public, npm install and Node app.js should be enough to run it.
 
 ## Comments
 
