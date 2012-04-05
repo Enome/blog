@@ -1,9 +1,9 @@
-﻿2012-04-03 Uploading images using jQuery File Upload and Express.js
+﻿2012-04-05 Uploading images using jQuery File Upload and Express.js
 ===================================================================
 
 The goal is to have a web page that lets you create a product with multiple images associated. We will be using JavaScript to asynchronously upload the files to the back-end. The back-end will return these images to the front-end which in turn will show a preview. 
 
-Google Chrome: 18, Firefox: 11.0, Safari: 5.1.5, Internet Explorer: 9.0.8 are the browser I tested.
+Google Chrome: 18, Firefox: 11.0, Safari: 5.1.5, Internet Explorer: 9.0.8 are the browsers I tested.
 
 ## Form
 
@@ -19,7 +19,7 @@ form
 
   p.images
 ``` 
-Please note that IE9 doesn't support multiple. The way we are building our app you will still be able to associate multiple files to your product but it will take extra clicks.
+Please note that IE9 doesn't support 'multiple'. The way we are building our app, you will still be able to associate multiple images to your product, but it will take extra clicks.
 
 ## Including the JavaScript files
 
@@ -51,7 +51,7 @@ app.post('/upload', function(req, res, next){
 });
 ```
 
-The reason why you need to set the Content-Type header can be found on the [plugin page](https://github.com/blueimp/jQuery-File-Upload/wiki/Setup) (scroll down).  The TL;DR version: IE9 uses an iframe so you need to set the Content-type header to text/plain' or you get a nasty download dialog.
+The reason why you need to set the Content-Type header can be found on the [plugin page](https://github.com/blueimp/jQuery-File-Upload/wiki/Setup) (scroll down).  The TL;DR version: IE9 uses an iframe so you need to set the Content-type header to 'text/plain' or you get a nasty download dialog.
 
 ## Storage Api
 
@@ -80,13 +80,13 @@ module.exports = function(file, callback){
 
 We rename and move the file from ~/tmp to /public/media so that we can serve it back to the front-end.
 
-We then give the file a uuid name so we don't have to worry about files overwriting each other. I wasn't sure if it was okay to remove the extension from a file but Stackoverflow seems to confirm it [here](http://stackoverflow.com/questions/5110384/can-i-use-images-without-extension-in-img) and [here](http://stackoverflow.com/questions/3463952/is-it-safe-to-serve-an-image-on-the-web-without-an-extension).
+We then give the file an uuid-name so we don't have to worry about files overwriting each other. I wasn't sure if it was okay to remove the extension from a file but Stackoverflow seems to confirm it [here](http://stackoverflow.com/questions/5110384/can-i-use-images-without-extension-in-img) and [here](http://stackoverflow.com/questions/3463952/is-it-safe-to-serve-an-image-on-the-web-without-an-extension).
 
 Don't forget to create a media directory inside /public and make sure you installed node-uuid for generating the file name.
 
 ## Configuring jQuery File Upload
 
-The back-end will return the uploaded images to the plugin once they are uploaded and moved them into the public/media directory. The front-end will then adds these images to the page to preview them and also add input fields to the form with the urls. That way you post the product data along with the image urls to the back-end. 
+The back-end will return the uploaded images to the plugin once they are uploaded and move them into the public/media directory. The front-end will then add these images to the page to preview them and also add input fields to the form with the urls included. That way you post the product data along with the image urls to the back-end. 
 
 ```js
 $('#FileUpload').fileupload({
@@ -109,11 +109,11 @@ $('#FileUpload').fileupload({
 });
 ```
 
-Next you need to write a route that can handle the product data you post. I'll leave this out since you probably need to customize it anyway to fit your needs. If you need some inspiration the plugin comes with a few examples and there is a pure Node.js example included. You most likely want to validate the file types and resize the images.
+Next you need to write a route that can handle the product data you post. I'll leave this out since you probably need to customize it anyway to fit your needs. If you need some inspiration ,the plugin comes with a few examples and there is a pure Node.js example included. You most likely want to validate the file types and resize the images.
 
 ## Bonus material
 
-If you have to make a private back-end for a client and you know or can force them to use either Chrome or Firefox then you can add the following code to the plugin setup.
+If you have to make a private back-end for a client and you know or can force them to use either Chrome or Firefox, then you can add the following code to the plugin setup.
 
 ```js
 add: function(e, data){
@@ -143,11 +143,11 @@ script(src="/javascript/jquery.fileupload-ip.js")
 script(src="/javascript/main.js")
 ```
 
-While almost finishing this post I got my [HTML5 Weekly](http://html5weekly.com/archive/32.html) which has a link to [HTML5 Doctor](http://html5doctor.com/drag-and-drop-to-server/?utm_source=html5weekly&utm_medium=email) with tons of info about drag and drop and uploading files.
+While finishing this post I got my [HTML5 Weekly](http://html5weekly.com/archive/32.html) which has a link to [HTML5 Doctor](http://html5doctor.com/drag-and-drop-to-server/?utm_source=html5weekly&utm_medium=email) with tons of info about drag and drop and uploading files.
 
 ## Source code
 
-The code for this app can be found inside this directory. Creating a media dir inside /public, npm install and Node app.js should be enough to run it.
+The code for this app can be found inside this directory. Creating a media dir inside /public, npm install and node app.js should be enough to run it.
 
 ## Comments
 
