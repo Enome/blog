@@ -8,7 +8,7 @@ When you are using Express.js most of your code will be inside middleware. Middl
 function (request, response, next) {};
 ```
 
-In other frameworks you have controllers which live at the end of the request/response chain. Middleware in those frameworks is used to added or remove stuff from request or response before it reaches the controller. Express.js doesn't have controllers it only has middleware.
+In other frameworks you have controllers which live at the end of the request/response chain. Middleware in those frameworks is used to add or remove stuff from request or response before it reaches the controller. Express.js doesn't have controllers it only has middleware.
 
 
 ## Control Flow
